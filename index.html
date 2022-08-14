@@ -1,0 +1,109 @@
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <!-- TODO EL LIENZO -->
+  <div style="position: relative; display: inline-block">
+    <!-- Barras de salud -->
+    <div
+      style="
+        position: absolute;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 20px;
+      "
+    >
+      <!-- jugador -->
+      <div
+        style="
+          position: relative;
+
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          border: 4px solid #fff;
+        "
+      >
+        <div style="background-color: red; height: 30px; width: 100%"></div>
+        <div
+          id="vida_jugador"
+          style="
+            position: absolute;
+            background-color: #818cf8;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+          "
+        ></div>
+      </div>
+
+      <!-- tiempo -->
+      <div
+        id="tiempo"
+        style="
+          background-color: black;
+          width: 100px;
+          height: 50px;
+          flex-shrink: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 30px;
+          border: 4px solid #fff;
+          color: white;
+        "
+      >
+        10
+      </div>
+
+      <!-- enemigo -->
+      <div
+        style="
+          position: relative;
+
+          width: 100%;
+          border: 4px solid #fff;
+        "
+      >
+        <div style="background-color: red; height: 30px"></div>
+        <div
+          id="vida_enemigo"
+          style="
+            position: absolute;
+            background-color: #818cf8;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+          "
+        ></div>
+      </div>
+    </div>
+    <div
+      id="mensaje"
+      style="
+        position: absolute;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      "
+    ></div>
+
+    <canvas></canvas>
+  </div>
+
+  <script src="./js/utils.js"></script>
+  <script src="./js/clases.js"></script>
+  <script src="./js/index.js"></script>
+</body>
